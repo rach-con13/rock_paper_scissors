@@ -1,28 +1,30 @@
 let choiceFlex = document.querySelector('.choice_flex');
 let selectedPhrase = document.querySelector('.selected_phrase');
-export class Player {
+import {Unit} from './unit.js';
+export class Player extends Unit {
     constructor() {
-        this.wins = 0;
-        this.losses = 0;
-        this.selected = null;  // selected choice between 3 options
-        this.choices = ['rock','paper','scissors']
+       super();
     }
     selectChoice = (e) => {
-        let rand = Math.floor(Math.random()*this.choices.length);
-        let choice = this.choices[rand];
+  
         let choiceDIV = e.target.closest('.choice');
-        let name = choiceDIV.dataset.name;
-        this.selected = choiceDIV;
-     
+   
+        
+        
+        let selectedChoice = this.choices.filter(choice => choiceDIV.dataset.name == choice.name)[0];
+    
+        this.selected = selectedChoice;
+   
         
         let choices = Array.from(choiceFlex.children);
         choices.forEach(choice => {
-            choice.dataset.name == this.selected.dataset.name ? choice.classList.add('selected_choice') : choice.classList.remove('selected_choice')
+            choice.dataset.name == this.selected.name ? choice.classList.add('selected_choice') : choice.classList.remove('selected_choice')
         })
         this.selectPhrase();
     }
     selectPhrase = () => {
-        let phrase = `You selected ${this.selected.dataset.name}`;
+        // let phrase = `You selected ${this.selected.name}`;
+        let phrase = `<p class="move">${this.selected.name}</p><p class="unit">player</p>`
         selectedPhrase.style.display = 'block';
         selectedPhrase.innerHTML = phrase;
     }

@@ -6,29 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     
 </head>
 <body>
     <main class="main">
         <div class="container">
             <h1 class="title">Rock Paper Scissors</h1>
+         
             <div class="choiceContainer">
-
-          
-            <div class="choice_flex">
-                <div data-name='rock' class="choice">
-                    <i class="fas fa-hand-rock"></i>
-                </div>
-                <div data-name='paper' class="choice">
-                    <i class="fas fa-hand-paper"></i>
-                </div>
-                <div data-name='scissors' class="choice">
-                    <i class="fas fa-hand-scissors"></i>
-                </div>
-            </div>
-            <p class="selected_phrase">You selected</p>
-        </div>
+         
             
+                <div class="choice_flex">
+                    <div data-name='rock' class="choice">
+                        <i class="fas fa-hand-rock"></i>
+                    </div>
+                    <div data-name='paper' class="choice">
+                        <i class="fas fa-hand-paper"></i>
+                    </div>
+                    <div data-name='scissors' class="choice">
+                        <i class="fas fa-hand-scissors"></i>
+                    </div>
+                </div>
+                <div class="resultsBox">
+                    <div class='results'>
+                    <div class="resultText selected_phrase">
+                        
+                    </div>
+                    <span class="vs">VS</span>
+                       <div class="resultText computer_phrase">
+            
+                       </div>
+                    </div>
+                       <div class="winner_phrase">
+                           
+                       </div>
+                </div>
+        
+            </div>
+            
+        </div>
+        <div class="scoreboard">
+            <div class="scoreboard_inner">
+                <p class="subtitle">Scoreboard</p>
+                <div class="score_item">
+                    <p class="round scoreText">Round 1</p>
+                    <p class="winner scoreText">Player</p>
+                </div>
+                
+            </div>
         </div>
     </main>
 

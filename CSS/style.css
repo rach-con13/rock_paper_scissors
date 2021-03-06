@@ -2,6 +2,7 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
 }
 body{
     font-family:Arial,sans-serif;
@@ -12,7 +13,14 @@ body{
     height:100vh;
     width:100%;
     padding-top:80px;
+    display:grid;
+  
+    grid-template-columns: 1fr minmax(200px,400px);
 
+}
+.scoreboard{
+
+    width:100%;
 }
 .container{
     width:60%;
@@ -26,10 +34,10 @@ body{
     color:#5d78e3;
 }
 .choiceContainer{
-      
+  
     height:300px;
     position: absolute;
-    bottom:0%;
+    bottom:40%;
     left:50%;
     transform: translateX(-50%);
 }
@@ -70,11 +78,78 @@ body{
   
     
 }
-
-.selected_phrase{
+.phrase{
     font-weight:bold;
     font-size:32px;
     margin-top:50px;
     text-align: center;
     display: none;
+}
+
+
+.scoreboard{
+    padding:32px;
+}
+.scoreboard_inner{
+    font-size:24px;
+    height:100%;
+    
+}
+.scoreboard_inner>.subtitle{
+    color:#43cca1;
+    margin-bottom:40px;
+}
+.score_card{
+    display:flex;
+}
+.score_item{
+    font-size:16px;
+    display:flex;
+    align-items: baseline;
+   
+    
+}
+
+.round{
+    font-size:20px;
+    color:#43cca1;
+    font-weight:bold;
+}
+.winner{
+    margin-left:24px;
+}
+
+.resultsBox{
+    border:2px solid #43cca1;
+
+    margin-top:40px;
+    border-radius: 5px;
+    padding:60px 80px;
+}
+.results{
+    
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.vs{
+    font-weight: bold;
+    font-size:24px;
+ 
+}
+.move{
+    font-size:24px;
+    color:#43cca1;
+    font-weight:bold;
+    text-transform: capitalize;
+
+
+}
+.winner_phrase{
+    display:block;
+    text-align: center;
+    font-size:18px;
+    font-weight:500;
+    margin-top: 24px;
 }
